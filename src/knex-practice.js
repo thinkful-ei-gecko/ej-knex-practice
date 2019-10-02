@@ -1,5 +1,6 @@
 require('dotenv').config();
 const knex = require('knex');
+const shoppingListItems = require('./shopping-list-service');
 
 const knexInstance = knex({
     client: 'pg',
@@ -57,3 +58,4 @@ function totalByCategory(){
 // paginateProducts(2);
 // getByDate(25);
 totalByCategory();
+console.log(shoppingListItems)
